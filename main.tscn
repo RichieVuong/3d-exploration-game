@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource path="res://player.gd" type="Script" id="1"]
+[ext_resource path="res://main.gd" type="Script" id="2"]
+[ext_resource path="res://hud.gd" type="Script" id="3"]
+
+[node name="ExplorationGame" type="Node3D"]
+script = ExtResource("2")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("1")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+position = Vector3(0, 3, 6)
+rotation_degrees = Vector3(-15, 180, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-45, -30, 0)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("3")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUD"]
+offset_left = 24.0
+offset_top = 24.0
+
+[node name="VBox" type="VBoxContainer" parent="HUD/MarginContainer"]
+
+[node name="Area" type="Label" parent="HUD/MarginContainer/VBox"]
+text = "Area 1"
+
+[node name="Score" type="Label" parent="HUD/MarginContainer/VBox"]
+text = "Shards: 0 / 3"
+
+[node name="Status" type="Label" parent="HUD/MarginContainer/VBox"]
+text = "Find the energy shards"
