@@ -29,6 +29,13 @@ A compact 3D exploration game built in Godot. The player explores three connecte
 
 I handled the project from scene setup through scripting, gameplay iteration, and testing. My main focus was making the controls feel responsive and keeping the gameplay loop easy to understand.
 
+## Documentation
+
+- [Technical architecture](docs/architecture.md)
+- [Gameplay and controls](docs/gameplay-and-controls.md)
+- [Autodesk CFD case study](docs/autodesk-cfd-case-study.md)
+- [Panda3D development notes](docs/panda3d-notes.md)
+
 ## Planned improvements
 
 - Add sound effects and ambient music
